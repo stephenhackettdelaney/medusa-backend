@@ -13,6 +13,7 @@
     "medusa"
   ],
   "scripts": {
+    "postinstall": "patch-package",
     "clean": "cross-env ./node_modules/.bin/rimraf dist",
     "build": "cross-env npm run clean && npm run build:server && npm run build:admin",
     "build:server": "cross-env npm run clean && tsc -p tsconfig.server.json",
@@ -60,6 +61,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^6.8.0",
     "jest": "^27.3.1",
+    "patch-package": "^8.0.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.7",
     "ts-loader": "^9.2.6",

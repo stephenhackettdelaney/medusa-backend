@@ -1,0 +1,66 @@
+diff --git a/node_modules/@medusajs/admin-ui/ui/src/components/organisms/sidebar/index.tsx b/node_modules/@medusajs/admin-ui/ui/src/components/organisms/sidebar/index.tsx
+index 74f06c4..b45ae23 100644
+--- a/node_modules/@medusajs/admin-ui/ui/src/components/organisms/sidebar/index.tsx
++++ b/node_modules/@medusajs/admin-ui/ui/src/components/organisms/sidebar/index.tsx
+@@ -8,8 +8,8 @@ import BuildingsIcon from "../../fundamentals/icons/buildings-icon"
+ import CartIcon from "../../fundamentals/icons/cart-icon"
+ import CashIcon from "../../fundamentals/icons/cash-icon"
+ import GearIcon from "../../fundamentals/icons/gear-icon"
+-import GiftIcon from "../../fundamentals/icons/gift-icon"
+-import SaleIcon from "../../fundamentals/icons/sale-icon"
++// import GiftIcon from "../../fundamentals/icons/gift-icon"
++// import SaleIcon from "../../fundamentals/icons/sale-icon"
+ import SquaresPlus from "../../fundamentals/icons/squares-plus"
+ import SwatchIcon from "../../fundamentals/icons/swatch-icon"
+ import TagIcon from "../../fundamentals/icons/tag-icon"
+@@ -94,18 +94,18 @@ const Sidebar: React.FC = () => {
+               text={t("sidebar-inventory", "Inventory")}
+             />
+           )}
+-          <SidebarMenuItem
++          {/* <SidebarMenuItem
+             pageLink={"/a/discounts"}
+             icon={<SaleIcon size={ICON_SIZE} />}
+             triggerHandler={triggerHandler}
+             text={t("sidebar-discounts", "Discounts")}
+-          />
+-          <SidebarMenuItem
++          /> */}
++          {/* <SidebarMenuItem
+             pageLink={"/a/gift-cards"}
+             icon={<GiftIcon size={ICON_SIZE} />}
+             triggerHandler={triggerHandler}
+             text={t("sidebar-gift-cards", "Gift Cards")}
+-          />
++          /> */}
+           <SidebarMenuItem
+             pageLink={"/a/pricing"}
+             icon={<CashIcon size={ICON_SIZE} />}
+diff --git a/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx b/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx
+index 0dbc1e9..805172d 100644
+--- a/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx
++++ b/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx
+@@ -9,8 +9,8 @@ import SEO from "../components/seo"
+ import Layout from "../components/templates/layout"
+ import Collections from "../domain/collections"
+ import Customers from "../domain/customers"
+-import Discounts from "../domain/discounts"
+-import GiftCards from "../domain/gift-cards"
++// import Discounts from "../domain/discounts"
++// import GiftCards from "../domain/gift-cards"
+ import Inventory from "../domain/inventory"
+ import Oauth from "../domain/oauth"
+ import Orders from "../domain/orders"
+@@ -50,10 +50,10 @@ const DashboardRoutes = () => {
+           <Route path="products/*" element={<ProductsRoute />} />
+           <Route path="product-categories/*" element={<ProductCategories />} />
+           <Route path="collections/*" element={<Collections />} />
+-          <Route path="gift-cards/*" element={<GiftCards />} />
++          {/* <Route path="gift-cards/*" element={<GiftCards />} /> */}
+           <Route path="orders/*" element={<Orders />} />
+           <Route path="draft-orders/*" element={<DraftOrders />} />
+-          <Route path="discounts/*" element={<Discounts />} />
++          {/* <Route path="discounts/*" element={<Discounts />} /> */}
+           <Route path="customers/*" element={<Customers />} />
+           <Route path="pricing/*" element={<PriceListRoute />} />
+           <Route path="settings/*" element={<Settings />} />
